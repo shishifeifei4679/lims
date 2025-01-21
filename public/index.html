@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!-- <meta base='/admin/'> -->
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script
+      type="text/javascript"
+      src="<%= BASE_URL %>jquery-1.12.4.js" ignore
+    ></script>
+    <script
+      src="<%= BASE_URL %>jquery-barcode.js" ignore
+      type="text/javascript"
+    ></script>
+    <style>
+      body,
+      html {
+        padding: 0;
+        margin: 0;
+      }
+      #firstScreen {
+        width: 100%;
+        height: 100vh;
+        background: #e6eff9;
+      }
+      #firstScreen-pack {
+        width: 100%;
+        height: 100vh;
+        background: url("<%= BASE_URL %>firstScreen.png");
+        opacity: 0.9;
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .firstScreen-name {
+        font-size: 34px;
+        color: #fff;
+        margin-bottom: 30px;
+        text-align: center;
+        letter-spacing: 3px;
+        font-style: oblique;
+      }
+      .firstScreen-loading {
+        font-size: 14px;
+        font-weight: 400;
+        color: #5a6f82;
+        text-align: center;
+      }
+      .firstScreen-loading > span {
+        position: relative;
+        display: inline-block;
+        animation: animate 1s ease-in-out infinite;
+        animation-delay: calc(0.05s * var(--i));
+      }
+      @keyframes animate {
+        0% {
+          transform: translateY(0px);
+        }
+
+        20% {
+          transform: translateY(-10px);
+        }
+
+        40%,
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--<meta base='/admin/'>-->
+    <noscript>
+      <strong>
+        We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to continue.
+      </strong>
+    </noscript>
+    <div id="app">
+      <div id="firstScreen">
+        <div id="firstScreen-pack">
+          <div class="firstScreen-contain">
+            <div class="firstScreen-name">
+              <img width="56px" src="<%= BASE_URL %>loading.gif" alt="" />
+            </div>
+            <div class="firstScreen-loading">
+              <span id="text1" style="--i: 1;"></span>
+              <span id="text2" style="--i: 2;"></span>
+              <span id="text3" style="--i: 4;"></span>
+              <span id="text4" style="--i: 5;"></span>
+              <span id="text5" style="--i: 6;"></span>
+              <span id="text6" style="--i: 7;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var LANGUAGE = {
+        zn: ["加", "载", "中,", "请", "稍", "后"],
+        cn: ["加", "载", "中,", "请", "稍", "后"],
+        en: ["","Loading", ",", "please", "wait",""],
+      };
+      function setTxt(language) {
+        for (var i = 0; i < LANGUAGE[language].length; i++) {
+          var id = "text" + (1 + i);
+          document.getElementById("text" + (1 + i)).innerHTML =
+            LANGUAGE[language][i];
+        }
+      }
+      var str = localStorage.getItem("vuex");
+      if (str) {
+        let { language } = JSON.parse(str);
+        if (language.language == "cn") {
+          setTxt(language.language);
+        } else {
+          setTxt(language.language);
+        }
+      } else {
+        setTxt("cn");
+      }
+    </script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

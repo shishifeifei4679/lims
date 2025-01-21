@@ -1,0 +1,95 @@
+{
+  "name": "lims-ui",
+  "version": "6.2.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run serve",
+    "serve": "vue-cli-service serve",
+    "build:dev": "vue-cli-service build --mode dev",
+    "build:prod": "vue-cli-service build --mode prod",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@riophae/vue-treeselect": "^0.4.0",
+    "animate.css": "^3.7.2",
+    "axios": "^0.21.1",
+    "better-scroll": "^2.1.0",
+    "bin-code-editor": "^0.9.0",
+    "clone": "^2.1.2",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.10.7",
+    "deepmerge": "^4.2.2",
+    "echarts": "^5.3.1",
+    "ele-table-editor": "^0.5.0",
+    "element-ui": "^2.15.5",
+    "is-number": "^7.0.0",
+    "js-cookie": "^2.2.1",
+    "jsbarcode": "^3.11.5",
+    "lodash.clonedeep": "^4.5.0",
+    "ly-downloader": "^1.0.5",
+    "mom-common-pc": "^1.0.2",
+    "mom-pc-core": "^1.0.10",
+    "mqtt": "^3.0.0",
+    "pretty-bytes": "^5.6.0",
+    "qiankun": "^2.10.12",
+    "qrcode": "^1.5.3",
+    "qs": "^6.9.4",
+    "throttle-debounce": "^3.0.1",
+    "uuid": "^10.0.0",
+    "vue": "^2.6.11",
+    "vue-count-to": "^1.0.13",
+    "vue-cropper": "^0.5.8",
+    "vue-draggable-resizable-gorkys": "^2.4.8",
+    "vue-ele-gallery": "^2.1.7",
+    "vue-i18n": "^8.28.2",
+    "vue-icon-font": "^1.0.4",
+    "vue-image-crop-upload": "^3.0.3",
+    "vue-json-editor": "^1.4.3",
+    "vue-page-transition": "^0.2.2",
+    "vue-print-nb": "^1.7.5",
+    "vue-progressbar": "^0.7.5",
+    "vue-router": "^3.2.0",
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.4.0",
+    "vuex-persistedstate": "^3.0.1",
+    "wangeditor": "^4.7.12"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.4.0",
+    "@vue/cli-plugin-e2e-cypress": "^4.4.0",
+    "@vue/cli-plugin-eslint": "^4.4.0",
+    "@vue/cli-service": "^4.4.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "bpmn-js": "7.5.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^8.0.0",
+    "sass-loader": "^10.4.1",
+    "terser-webpack-plugin": "^3.0.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

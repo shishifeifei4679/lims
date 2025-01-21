@@ -1,0 +1,164 @@
+/* 系统头部颜色 */
+$app-color-header: var(--header-bkColor); //侧边背景色
+$header-fontColor: var(--header-fontColor); //侧边字体颜色
+
+$header-bkColor-hover: var(--header-bkColor-hover); //移入与点击背景色
+$header-fontColor-hover: var(--header-fontColor-hover); //移入与点击字体颜色
+$header-topBkColor: var(--header-topBkColor); //顶部背景色
+/* 菜单选中颜色 */
+$menu-active-background: linear-gradient(90deg, #1a55c0 0%, #2c3849 100%);
+/* 表头和内容不对齐解决 */
+body .el-table th.gutter {
+  display: table-cell !important;
+}
+body .el-table colgroup.gutter {
+  display: table-cell !important;
+}
+thead .el-table-column--selection>.cell{
+  padding-left: 10px !important;
+}
+.el-table--border .el-table__cell:first-child .cell{
+  padding-left: 14px;
+}
+.el-table__body-wrapper.is-scrolling-none ~ .el-table__fixed,
+.el-table__body-wrapper.is-scrolling-none ~ .el-table__fixed-right {
+  height: auto !important;
+  bottom: 0 !important;
+}
+.el-table .el-table__fixed,
+.el-table__fixed-right {
+  height: auto !important;
+  bottom: 9px;
+}
+.el-dropdown-menu {
+  min-width: 100px;
+}
+.el-table thead {
+  color: #666666;
+}
+.el-table th {
+  background-color: #f1f5fe;
+}
+.el-tree--highlight-current .el-tree-node.is-current > .el-tree-node__content {
+  background-color: #f1f5fe;
+  color: #0299ff;
+}
+.el-dialog__header {
+  padding: 15px 20px;
+  // background: #5980ff;
+  border-radius: 5px;
+}
+.el-dialog {
+  border-radius: 5px;
+  margin-top: 10vh !important;
+}
+
+.el-dialog__body .ele-form-btns .el-form-item__content .el-button {
+  float: right;
+  margin-right: 10px;
+}
+
+.el-tree-node__label {
+  font-size: 13px;
+}
+.el-input-number--small {
+  width: 100% !important;
+}
+.el-dialog__body {
+  max-height: 450px;
+  overflow: auto;
+}
+.upload-file-none .ele-upload-file-list {
+  display: none;
+}
+.el-table th.el-table__cell {
+  background-color: #eff2fb;
+}
+
+//滚动条的宽度
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #e4e4e4;
+  border-radius: 6px;
+}
+//滚动条的滑块
+::-webkit-scrollbar-thumb {
+  background-color: #a1a3a9;
+  border-radius: 6px;
+}
+
+.el-menu--popup .el-menu-item.is-active {
+  background: $menu-active-background;
+}
+
+.ele-form--inline .el-form .el-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ele-form--inline .el-form .el-row .ele-form-btns {
+  width: auto;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.ele-form .vue-treeselect__control {
+  height: 32px;
+}
+.ele-form .vue-treeselect__placeholder {
+  color: #bdbdbd;
+  font-size: 13px;
+}
+.ele-form .vue-treeselect__single-value {
+  color: #606266;
+}
+.vue-treeselect__placeholder,
+.vue-treeselect__single-value {
+  line-height: 32px;
+}
+.popperClass[x-placement^="right"] {
+  margin-left: -1px;
+  // background-color: $app-color-header;
+  background-color: #fff;
+  padding: 10px;
+  min-width: 120px;
+  box-sizing: border-box;
+  border-radius: 0;
+  border: 0px;
+}
+
+/* 新ui规范中的状态标签定义*/
+.status-simulate-tags {
+  display: inline-block;
+  // min-width: 40px;
+  height: 24px;
+  padding: 0 8px;
+  background: #3C7FCD;
+  border-radius: 2px 2px 2px 2px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #FFFFFF;
+  line-height: 24px;
+}
+
+.status-simulate-tags-color-green {
+  background: #73D13D;
+}
+
+.status-simulate-tags-color-orange {
+  background: #FAAD14;
+}
+
+.status-simulate-tags-color-red {
+  background: #F56C6C;
+}
+
+.status-simulate-tags-color-blue-grey {
+  background: #8F9FB3;
+}
+
+.status-simulate-tags-color-grey {
+  background: #B3B3B3;
+}
