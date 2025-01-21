@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="886670b6-4979-45a2-b047-e94ec7d3877f" name="变更" comment="3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/searchArrKey.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/searchArrKey.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
