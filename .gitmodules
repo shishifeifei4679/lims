@@ -1,3 +1,4 @@
 [submodule "src/mom-pc-core/components"]
 	path = src/mom-pc-core/components
 	url = https://github.com/shishifeifei4679/components.git
+	update = none
