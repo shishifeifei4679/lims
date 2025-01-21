@@ -1,4 +1,4 @@
-const TerserPlugin = require("terser-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin")
 const sys = require("./src/config.js");
 const { name } = require("./package.json");
 module.exports = {
